@@ -2,12 +2,15 @@ import tweepy
 import schedule
 import time
 import random
+import os
+from dotenv import load_dotenv
 
 def main():
-	CONSUMER_KEY = "0NBTSJRajwZ0JStVs7cerFFPG"
-	CONSUMER_SECRET = "6PCzho21MrfBbpP1qt2OpzpmdZscbhJPpfcJMJgeTkzX7Jb1JW"
-	ACCESS_TOKEN = "1277004639301365760-aUiAeW8KhSCIgHY1bX0lmTX4cSPzZO"
-	ACCESS_TOKEN_SECRET = "npFEnkrxfHiYciLm0r2oDjHGAtkL4LNH4pQwm9XeMKuAe"
+	load_dotenv("APIKEY.env")
+	CONSUMER_KEY = os.environ.get("CONSUMER_KEY")
+	CONSUMER_SECRET = os.environ.get("CONSUMER_SECRET")
+	ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
+	ACCESS_TOKEN_SECRET = os.environ.get("ACCESS_TOKEN_SECRET")
 	auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 	auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
