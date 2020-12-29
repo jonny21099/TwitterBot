@@ -6,8 +6,8 @@ import os
 def main():
 	uni_chars = ["\u2005","\u205f"]
 	#Lyrics file from Genius.com
-	with open("../../docs/Lyrics_SelenaGomez.json", 'r', encoding='utf-8') as file:
-		with open("../../docs/prunedLyrics.txt", 'w', encoding='utf-8') as lyricsFile:
+	with open("../../docs/markovChain.json", 'r', encoding='utf-8') as file:
+		with open("../../docs/markovChain.txt", 'w', encoding='utf-8') as lyricsFile:
 			json_data = json.load(file)
 			for song in json_data['songs']:
 				if song['lyrics'] is not None:
