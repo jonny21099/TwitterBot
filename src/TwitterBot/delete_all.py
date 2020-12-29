@@ -18,4 +18,8 @@ def delete_all():
 			print("Deleted:%s" % status.id)
 		except:
 			print ("Failed to delete:%s" % status.id)
-delete_all()
+
+print("THIS WILL DELETE ALL YOUR TWEETS")
+user_input = input("ARE YOU SURE YOU WANT TO DELETE ALL YOUR TWEETS?\nTYPE \"DELETE TWEETS\" TO DELETE ALL YOUR TWEETS\n")
+if (user_input == "DELETE TWEETS"):
+	delete_all()

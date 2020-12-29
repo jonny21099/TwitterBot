@@ -7,7 +7,7 @@ import webbrowser #builtin
 import requests_oauthlib #API
 import tweepy #API
 from tweet import tweet 
-from markov_tweet import markov_tweet
+from markov_tweet import generateWordDict
 
 def main():
 	load_dotenv("APIKEY.env")
@@ -40,14 +40,14 @@ def main():
 	api = tweepy.API(auth)
 	format_continue = True
 	while format_continue is True:
-		tweet_format = input("Which tweet pattern would you like to use?\n1.Random line selection\n2.Markov Chain\n")
+		tweet_format = input("Which tweet pattern would you like to use?\n1.Random tweet selection\n2.Markov Chain\n")
 		if tweet_format == "1":
 			print("Posting...")
-			schedule.every(5).seconds.do(tweet,api=api)
+			schedule.every(15).seconds.do(tweet,api=api)
 			break
 		elif tweet_format == "2":
 			print("Posting...")
-			schedule.every(5).seconds.do(markov_tweet,api=api)
+			schedule.every(15).seconds.do(generateWordDict,api=api)
 			break
 		else:
 			print("Please enter a valid answer")
@@ -56,16 +56,3 @@ def main():
 		schedule.run_pending()
 		time.sleep(1)
 main()
-
-#alternative approach
-	# consumer = oauth.Consumer(CONSUMER_KEY, CONSUMER_SECRET)
-	# client = oauth.Client(consumer)
-	# request_token_uri="https://api.twitter.com/oauth/request_token"
-	# body = urllib.parse.urlencode(dict(oauth_callback=callback_uri))
-	# resp, content = client.request(request_token_uri,'POST',body=body)
-	# info = content.decode("utf-8")
-	# info_list = str.split(info,"&")
-	# authorization_url = "https://api.twitter.com/oauth/authorize?%s" % (info_list[0])
-
-
-
