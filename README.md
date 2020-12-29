@@ -11,8 +11,11 @@ This is a twitterbot that posts on a user's account using random selection or ma
 ## **Usage**
 ### **Installation**
 1. Download or clone the repo.
+
 2. ```cd src/TwitterBot```
+
 3. Open APIKEY.env and fill in your developer account information for twitter.
+
 4. Option 1 or Option 2.
 
 Option 1
