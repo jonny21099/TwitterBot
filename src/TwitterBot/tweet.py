@@ -1,6 +1,7 @@
 import random
 import tweepy #update_status
 import json  #builtin
+
 def tweet(api):
 	with open('tweets.json', 'r') as f:
 		all_message = f.readlines()
