@@ -29,11 +29,15 @@ To use markov chaining, copy .txt file into the doc directory and rename it as m
 
 For example purposes, the repo comes with the required files, randomSelection.json and markovChain.txt
 
-randomSelection.json is a random database containing tweets located on [twitter archive](archive.org)
+randomSelection.json is a random database containing tweets located on [twitter archive](https://archive.org/search.php?query=collection%3Atwitterstream&sort=-publicdate)
 
 markovChain.txt is a pruned lyrics textfile obtained using a [lyricsGenius API](https://github.com/johnwmillr/LyricsGenius) first, and then parsing the .json into a text file using dataparser.py provided
 
 **NOTE**: *dataparser.py will only work on data extrapulated using the lyricsGenius API above.*
+
+![image](https://user-images.githubusercontent.com/43177180/103320067-47792600-49f1-11eb-99b6-e7f0128ff627.png)
+
+![lastone](https://user-images.githubusercontent.com/43177180/103320334-2a912280-49f2-11eb-89ed-eac928f6dede.png)
 
 
 
