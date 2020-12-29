@@ -5,7 +5,7 @@ import random
 def generateWordDict(api):
     #Created a nested dictionary with the 1st Key = a word second key = possible words that come after and value = counter
     #Create a dictionary for every word encountered with the number of times that word occurs as its value
-    with open("prunedLyrics.txt", 'r', encoding="utf-8") as f:
+    with open("..\..\docs\prunedLyrics.txt", 'r', encoding="utf-8") as f:
         #words_dic contains a dictionary with the following format
         #{word:{nextword:appearances, anotherwordthatcomesafter:appearances}}
         words_dic = {}
