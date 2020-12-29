@@ -3,7 +3,7 @@ import tweepy #update_status
 import json  #builtin
 
 def tweet(api):
-	with open('randomSelection.json', 'r') as f:
+	with open('../../docs/randomSelection.json', 'r') as f:
 		all_message = f.readlines()
 		while True:
 			message = random.choice(all_message)
