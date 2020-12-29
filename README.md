@@ -19,14 +19,21 @@ This is a twitterbot that posts on a user's account using random selection or ma
 4. Option 1 or Option 2.
 
 Option 1
-To use random selection, copy .json file into the directory and rename it as randomSelection.json
+To use random selection, copy a twitter .json file into the directory and rename it as randomSelection.json
 
 Option 2
-To use markov chaining, copy .json file into the directory and rename it as markovChaining.json, and then run ```python3 dataParser.py``` and a new file named markovChaining.txt should be generated
+To use markov chaining, copy .txt file into the doc directory and rename it as markovChain.txt
 
 5. To run the program use ```python3 main.py```
 ### **Example**
 
+For example purposes, the repo comes with the required files, randomSelection.json and markovChain.txt
+
+randomSelection.json is a random database containing tweets located on [twitter archive](archive.org)
+
+markovChain.txt is a pruned lyrics textfile obtained using a [lyricsGenius API](https://github.com/johnwmillr/LyricsGenius) first, and then parsing the .json into a text file using dataparser.py provided
+
+**NOTE**: *dataparser.py will only work on data extrapulated using the lyricsGenius API above.*
 
 
 
